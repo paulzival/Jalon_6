@@ -66,8 +66,7 @@ def follow_ball(blob_cx, blob_cy, img_width):
     cmd_moteur(0, vit_droite, vit_gauche)
 
 def scan_for_ball():    #cherche la balle
-    if scanning:
-        cmd_moteur(0, 60, 00)  # Tourner à droite
+    cmd_moteur(0, 60, 00)  # Tourner à droite
 
 def stop_moteurs(): # arrét des moteur
     cmd_moteur(0, 0, 0)
