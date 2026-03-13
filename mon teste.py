@@ -126,7 +126,8 @@ while True:
             etat = "recherche"  # Retourne en mode recherche après avoir cherché le bleu
     
     
-    elif etat == "recherche":
+    else:
+        etat == "recherche"
         if not scanning:
             scanning = True
             scan_for_ball()
