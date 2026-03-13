@@ -121,17 +121,15 @@ while True:
         if blobs_bleus:
             largest_blue_blob = max(blobs_bleus, key=lambda b: b.pixels())
             evite_mure(largest_blob.cx(), largest_blob.cy(), img.width())
+            time.sleep_ms(500)
+            stop_moteurs()
+            etat = "recherche"  # Retourne en mode recherche après avoir cherché le bleu
     
     
     elif etat == "recherche":
         if not scanning:
             scanning = True
             scan_for_ball()
-
-
-        time.sleep_ms(500)
-        stop_moteurs()
-        etat = "recherche"  # Retourne en mode recherche après avoir cherché le bleu
 
     # Gestion des LEDs
     if Recherche_B:
